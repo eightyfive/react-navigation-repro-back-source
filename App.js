@@ -3,9 +3,6 @@ import { Button, Text, View } from 'react-native';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
-
-
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -41,8 +38,6 @@ export default function App() {
   return (
     <NavigationContainer theme={NavigationTheme}>
       <Stack.Navigator screenOptions={{
-        animation: "slide_from_right", // Force on Android
-        headerBackTitleVisible: false,
         headerBackImageSource: require("./assets/back-icon.png"),
       }}>
         <Stack.Screen name="Home" component={HomeScreen} />
